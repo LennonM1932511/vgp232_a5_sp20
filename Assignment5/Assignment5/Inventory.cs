@@ -18,20 +18,23 @@ namespace Assignment5
 
         public void Add(Item item)
         {
-            // TODO: add implementation.
-            throw new NotImplementedException();
+            items.Add(item);
+            //throw new NotImplementedException();
         }
 
         public void Remove(Item item)
         {
-            // TODO: add implementation.
-            throw new NotImplementedException();
+            items.Remove(item);
+            //throw new NotImplementedException();
         }
 
         public void ShowInventory()
         {
-            // TODO: add implementation.
-            throw new NotImplementedException();
+            foreach (var item in items)
+            {
+                Console.WriteLine($"Name: {item.Name}\tMod: {item.Modifier}\tType: {item.IType}");
+            }            
+            //throw new NotImplementedException();
         }
     }
 }

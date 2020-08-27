@@ -32,7 +32,7 @@ namespace Assignment5
         {
             foreach (var item in items)
             {
-                Console.WriteLine($"Name: {item.Name}\tMod: {item.Modifier}\tType: {item.IType}");
+                Console.WriteLine("Name: {0}\nMod: {1}\nType: {2}\n", item.Name, item.Modifier, item.IType);
             }            
             //throw new NotImplementedException();
         }

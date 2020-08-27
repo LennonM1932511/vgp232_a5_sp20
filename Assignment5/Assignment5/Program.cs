@@ -10,6 +10,15 @@ namespace Assignment5
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Welcome to the Adventure of Assignment 5");
+
+            Character myCharacter = new Character("Bob", RaceCatagory.Elf, 100);
+
+            myCharacter.TakeDamage(10);
+
+            myCharacter.RestoreHealth(10);
+
+            Console.WriteLine("The game has ended with {0} with {1} health", myCharacter.Name, myCharacter.HealthPoints);
 
             // TODO: initialize the inventory
             // Add a few items

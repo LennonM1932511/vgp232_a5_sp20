@@ -12,19 +12,33 @@ namespace Assignment5
         {
             Console.WriteLine("Welcome to the Adventure of Assignment 5");
 
-            Character myCharacter = new Character("Bob", RaceCatagory.Elf, 100);
+            Character myCharacter = new Character("Razia", RaceCatagory.Elf, 100);
 
             myCharacter.TakeDamage(10);
 
             myCharacter.RestoreHealth(10);
 
-            Console.WriteLine("The game has ended with {0} with {1} health", myCharacter.Name, myCharacter.HealthPoints);
+            // create inventory and add items
+            Inventory inventory = new Inventory(10);
+            Item sword = new Item("sword", 1, ItemType.equipment);
+            inventory.Add(sword);
 
-            // TODO: initialize the inventory
-            // Add a few items
-            // Remove a few items
-            // show the inventory.
+            Item shield = new Item("shield", 1, ItemType.equipment);
+            inventory.Add(shield);
 
+            Item potion = new Item("potion", 5, ItemType.consumable);
+            inventory.Add(potion);
+
+            Item bosskey = new Item("bosskey", 1, ItemType.key);
+            inventory.Add(bosskey);
+
+            // remove potion
+            inventory.Remove(potion);
+            
+            // show inventory
+            inventory.ShowInventory();
+
+            Console.WriteLine("\nThe game has ended with {0} with {1} health", myCharacter.Name, myCharacter.HealthPoints);
         }
     }
 }

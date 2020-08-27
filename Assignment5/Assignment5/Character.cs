@@ -29,6 +29,10 @@ namespace Assignment5
         public void TakeDamage(int damage)
         {
             HealthPoints -= damage;
+            if (HealthPoints <= 0)
+            {
+                Console.WriteLine("{0} has fallen!", Name);
+            }
             Console.WriteLine("{0} has taken {1} damage and has a total of {2} left.", Name, damage, HealthPoints);
         }
 
